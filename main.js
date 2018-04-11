@@ -52,7 +52,7 @@ else
 
 $scope.submit = function (data) {
     //mock
-    alert($scope.sectionA.name);
+    alert("We will send the data to a backend when this is real :)");
 
 
 };
