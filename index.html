@@ -1,42 +1,169 @@
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js'></script>
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-sanitize.min.js'></script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js'></script>
+   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-sanitize.min.js'></script>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="base.css">
-<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js'></script>
-<script type='text/javascript' src='ui-bootstrap-tpls-2.5.0.min.js'></script>
-<script type='text/javascript' src='main.js'></script>
-
-
-<html>
-<div ng-app="myApp" ng-controller="mainCtrl">
+   <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js'></script>
+   <script type='text/javascript' src='ui-bootstrap-tpls-2.5.0.min.js'></script>
+   <script type='text/javascript' src='main.js'></script>
+   
+    </script>
+    <title>Example</title>
+    <!-- Bootstrap -->
+ 
+    <link href="base.css" rel="stylesheet">
+    <link href="custom.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
     
-  
-                
-                
-    
-        
-    <div ng-include="'status.html'" class="container-fluid">
-              
-           
+  </head>
+  <div ng-app="myApp" ng-controller="mainCtrl">
+    <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Canna App</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
           </div>
+        </nav>
     
-          <div class="jumbotron">
-            <h1 class="display-3">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-           
-    <ul>
-        <li ng-repeat="x in tester">{{x}}</li>
-    </ul>
+        <div class="container">
+    
+          <div class="starter-template">
+            <h1>Form Example</h1>
             <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-          </div>
+    <div id="KeyMain">
+    <legend ng-click="SetSection(1)">Section 1: Qualifying Patient Information</legend>
+    <fieldset ng-show="Section1">
 
-  
+    
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="name" class="col-sm-2 control-label">
+        Name</label>
+
+        <div class="col-sm-6">
+          <input placeholder="Legal Name" type="text" ng-model="sectionA.Name" class="form-control">
+          
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Date of Birth" class="col-sm-2 control-label">
+        Email</label>
+
+        <div class="col-sm-6">
+          <input placeholder="Enter Date of Birth:" type="email" ng-model="sectionA.Email"  class="form-control">
+          
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="Address" class="col-sm-2 control-label">
+            Home Address</label>
+
+        <div class="col-sm-6">
+          <textarea placeholder="Home Address" ng-model="sectionA.HomeAddress" class="form-control">
+          </textarea>
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="City" class="col-sm-2 control-label">
+            City</label>
+
+        <div class="col-sm-6">
+          <input placeholder="City" ng-model="sectionA.City" class="form-control">
+        </input>
+          
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="State" class="col-sm-2 control-label">
+            State</label>
+
+        <div class="col-sm-6">
+            <select class="form-control">
+                <option>Maine
+                <option>Other
+              </select>
+          
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="Zip" class="col-sm-2 control-label">
+        Zip</label>
+
+        <div class="col-sm-6">
+          <input placeholder="Zip Code" type="text" ng-model="sectionA.Zip" ng-pattern="onlyNumbers" class="form-control">
+          
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="County" class="col-sm-2 control-label">
+            County</label>
+
+        <div class="col-sm-6">
+            <select class="form-control">
+                <option>Cumberland
+                    <option>Franklin
+                        <option>Piscataquis
+                            <option>Somerset
+                                <option>Aroostook
+                                    <option>Androscoggin
+                                        <option> Sagadahoc
+                                            <option> Kennebec
+                                                <option> Lincoln
+                                                    <option> Knox
+                                                        <option> Hancock
+                                                            <option> Waldo
+                                                                <option> Washington
+                                                                    <option> York
+                                                                        <option> Oxford
+                                                                            <option> Penobscot
+              </select>
+          
+        </div>
+      </div>
+      
+    </fieldset>
+  </p>
+
+     
+        <button ng-click="submit()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+  </body>
 </div>
-</div> 
 </html>
-
