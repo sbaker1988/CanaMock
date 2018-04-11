@@ -1,0 +1,42 @@
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-sanitize.min.js'></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="base.css">
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js'></script>
+<script type='text/javascript' src='ui-bootstrap-tpls-2.5.0.min.js'></script>
+<script type='text/javascript' src='main.js'></script>
+
+
+<html>
+<div ng-app="myApp" ng-controller="mainCtrl">
+    
+  
+                
+                
+    
+        
+    <div ng-include="'status.html'" class="container-fluid">
+              
+           
+          </div>
+    
+          <div class="jumbotron">
+            <h1 class="display-3">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+           
+    <ul>
+        <li ng-repeat="x in tester">{{x}}</li>
+    </ul>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+          </div>
+
+  
+</div>
+</div> 
+</html>
+

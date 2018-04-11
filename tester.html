@@ -1,0 +1,19 @@
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.9/angular-sanitize.min.js'></script>
+
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js'></script>
+<script type='text/javascript' src='ui-bootstrap-tpls-2.5.0.min.js'></script>
+<script type='text/javascript' src='main.js'></script>
+
+
+
+<div ng-app="myApp" ng-controller="mainCtrl">
+    <ul>
+        <li ng-repeat="x in tester">{{x}}</li>
+    </ul>
+    <div id="xx" ng-include="Holder.html"></div>
+</div>
+
+<script type="text/ng-template" id="Holder.html">
+    Content of the template.
+  </script>
