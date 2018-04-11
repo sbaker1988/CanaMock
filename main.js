@@ -13,12 +13,13 @@ app.controller("mainCtrl", ['$scope', '$http', '$q', '$location', '$timeout',  '
     function ($scope, $http, $q, $location, $timeout, $parse, $window) {
           
         $scope.Section1 = true;
-        
+        $scope.Section2 = true; 
         $scope.onlyNumbers = /^\d+$/;
 $scope.SetSection = function (data)
 {
  
-
+ if (data == 1)
+ {
   if ($scope.Section1 )
  {
     $scope.Section1 = false;
@@ -29,6 +30,25 @@ $scope.SetSection = function (data)
  }
 
 }
+
+//
+ 
+if (data == 2)
+{
+ if ($scope.Section2 )
+{
+   $scope.Section2 = false;
+}
+else
+{
+   $scope.Section2 = true;
+}
+
+}
+
+
+}
+
 
 $scope.submit = function (data) {
     //mock

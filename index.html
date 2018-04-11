@@ -153,6 +153,67 @@
       </div>
       
     </fieldset>
+  <!-- break -->
+    <legend ng-click="SetSection(2)">Section 2: Sales Transaction</legend>
+    <fieldset ng-show="Section2">
+
+    
+    <form class="form-horizontal">
+      <div class="form-group">
+        
+      <div class="form-group">
+        <label for="Request" class="col-sm-2 control-label">
+            General</label>
+
+        <div class="col-sm-6">
+          <input placeholder="General Info" ng-model="sectionB.Request" class="form-control">
+        </input>
+          
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="Type" class="col-sm-2 control-label">
+            Product Type</label>
+
+        <div class="col-sm-6">
+            <select class="form-control">
+                <option>Flowers
+                <option>Clones
+                <option>Baked Goods</option>
+                <option>Other</option>
+              </select>
+          
+        </div>
+    
+            
+          </div>
+          <div class="form-group">
+              <label for="Safe" class="col-sm-2 control-label">
+                  Parent Agrees to State Laws</label>
+      
+              <div class="col-sm-6">
+                
+                  <input type="checkbox" id="Safe" name="Agrees" value="Yes">
+              </div>
+          
+                  
+                </div>
+
+
+
+
+        </div>
+
+      </div>
+      </div>
+      
+      
+  
+      
+      
+    </fieldset>
   </p>
 
      
